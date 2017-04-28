@@ -19,11 +19,11 @@ module Danger
 
   class Buddybuild < CI
 
-    def self.validates_as_ci?(_)
+    def self.validates_as_ci?(env)
       env.key? "BUDDYBUILD_BUILD_NUMBER"
     end
 
-    def self.validates_as_pr?(_)
+    def self.validates_as_pr?(env)
       env.key? "BUDDYBUILD_PULL_REQUEST"
     end
 
